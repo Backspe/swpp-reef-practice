@@ -56,6 +56,7 @@ public final class PrimeDriver {
       final String taskId = "PrimeTask-" + taskIndex;
       final Configuration taskConfiguration = TaskConfiguration.CONF
           .set(TaskConfiguration.IDENTIFIER, taskId)
+		  .set(TaskConfiguration.TASK, PrimeTask.class)
           .build();
       activeContext.submitTask(taskConfiguration);
     }
